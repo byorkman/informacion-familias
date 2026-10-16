@@ -1,0 +1,10 @@
+{
+  "name": "informacion-familias",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hojas de información sobre medicaciones para familias de reumatología pediátrica",
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Información para familias</title>
+  <meta name="description" content="Hojas de información sobre medicaciones para familias de reumatología pediátrica.">
+  <meta name="theme-color" content="#a8d5c8">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="no-imprimir">
+      <a class="portal" href="https://reumapedia.vercel.app/"><img src="img/logo.svg" alt="" width="20" height="20">ReumaPedia</a>
+      <h1>Información para familias</h1>
+      <p class="sub">Elegir una hoja, completarla y compartirla o imprimirla</p>
+    </header>
+
+    <p class="aviso no-imprimir">Textos pendientes de validación médica. Revisarlos antes de entregarlos.</p>
+
+    <nav id="selector" class="chips no-imprimir" aria-label="Hoja"></nav>
+
+    <section class="panel no-imprimir">
+      <h2>Datos para agregar <span class="rango">opcional</span></h2>
+      <form id="form" class="grilla" novalidate autocomplete="off">
+        <div class="campo ancho"><label for="indicacion">Indicación</label><input type="text" id="indicacion" placeholder="Ej.: 15 mg en inyección los lunes"></div>
+        <div class="campo"><label for="control">Próximo control</label><input type="text" id="control" placeholder="Ej.: 3 meses, con laboratorio"></div>
+        <div class="campo"><label for="telefono">Teléfono de contacto</label><input type="text" id="telefono" inputmode="tel"></div>
+      </form>
+      <div class="acciones">
+        <button type="button" id="compartir" class="principal">Compartir</button>
+        <button type="button" id="copiar">Copiar texto</button>
+        <button type="button" id="imprimir">Imprimir</button>
+      </div>
+      <p id="estado" class="estado" aria-live="polite"></p>
+    </section>
+
+    <article id="hoja" class="hoja"></article>
+
+    <footer class="no-imprimir">
+      <p>Los datos no se guardan ni se envían: todo se hace solo en este dispositivo.</p>
+      <p class="version">v1.0.0 · 16 oct 2026</p>
+    </footer>
+  </main>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
